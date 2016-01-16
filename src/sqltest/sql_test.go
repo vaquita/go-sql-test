@@ -74,7 +74,7 @@ func (m *goMysqlDB) RunTest(t *testing.T, fn func(params)) {
 		t.Logf("skipping test; no MySQL running on localhost:3306")
 		return
 	}
-	db, err := sql.Open("mysql", "mysql://root@localhost:3306/gosqltest")
+	db, err := sql.Open("vaquita", "mysql://root@localhost:3306/gosqltest")
 	if err != nil {
 		t.Fatalf("error connecting: %v", err)
 	}
